@@ -472,7 +472,7 @@
                                             <div class="list-group list-group-flush small">
                                                 {% set team1_batsmen = match.team1_innings.batting|sort(attribute='runs', reverse=true) %}
                                                 {% set team2_batsmen = match.team2_innings.batting|sort(attribute='runs', reverse=true) if match.team2_innings else [] %}
-                                                {% for batsman in (team1_batsmen + team2_batsmen)|sort(attribute='runs', reverse=true)|slice(0, 3) %}
+                                                {% for batsman in (team1_batsmen + team2_batsmen)|sort(attribute='runs', reverse=true)|safe_slice(0, 3) %}
                                                 <div class="list-group-item bg-transparent px-0">
                                                     <div class="d-flex justify-content-between">
                                                         <span>{{ batsman.name }}</span>
@@ -488,7 +488,7 @@
                                             <div class="list-group list-group-flush small">
                                                 {% set team1_bowlers = match.team2_innings.bowling|sort(attribute='wickets', reverse=true) if match.team2_innings else [] %}
                                                 {% set team2_bowlers = match.team1_innings.bowling|sort(attribute='wickets', reverse=true) %}
-                                                {% for bowler in (team1_bowlers + team2_bowlers)|sort(attribute='wickets', reverse=true)|slice(0, 3) %}
+                                                {% for bowler in (team1_bowlers + team2_bowlers)|sort(attribute='wickets', reverse=true)|safe_slice(0, 3) %}
                                                 <div class="list-group-item bg-transparent px-0">
                                                     <div class="d-flex justify-content-between">
                                                         <span>{{ bowler.name }}</span>

@@ -10,6 +10,15 @@ logging.basicConfig(level=logging.DEBUG)
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "cricket_score_app_secret")
 
+# Custom Jinja filter for safe slicing
+@app.template_filter('safe_slice')
+def safe_slice(iterable, start, end=None):
+    if not iterable:
+        return []
+    if end is None:
+        return iterable[start:]
+    return iterable[start:end]
+
 # Helper function to load data from JSON files
 def load_data(filename):
     try:
