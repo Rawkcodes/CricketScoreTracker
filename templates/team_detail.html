@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ team.name }} - Team Profile{% endblock %}
+
+{% block content %}
+<div class="container teams-page">
+    <!-- Team Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header text-center text-light py-4" style="background-color: {{ team.logo_color }};">
+                    <h1 class="display-4 fw-bold mb-0">{{ team.name }}</h1>
+                    <p class="lead mb-0">{{ team.short_name }}</p>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="lead">{{ team.description }}</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-3">
+                                    <h5 class="mb-3">Team Details</h5>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item bg-transparent px-0">
+                                            <strong>Captain:</strong> {{ team.captain }}
+                                        </li>
+                                        <li class="list-group-item bg-transparent px-0">
+                                            <strong>Coach:</strong> {{ team.coach }}
+                                        </li>
+                                        <li class="list-group-item bg-transparent px-0">
+                                            <strong>Home Ground:</strong> {{ team.home_ground }}
+                                        </li>
+                                        <li class="list-group-item bg-transparent px-0">
+                                            <strong>Recent Form:</strong>
+                                            {% for result in team.recent_form %}
+                                            <span class="badge {% if result == 'W' %}bg-success{% elif result == 'L' %}bg-danger{% else %}bg-warning{% endif %} me-1">{{ result }}</span>
+                                            {% endfor %}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <h5 class="mb-3">ICC Rankings</h5>
+                                    <div class="list-group list-group-flush">
+                                        <div class="list-group-item bg-transparent px-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span><i class="fas fa-trophy text-warning me-2"></i>Test</span>
+                                                <span class="badge bg-primary">Rank #{{ team.icc_ranking.test }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item bg-transparent px-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span><i class="fas fa-trophy text-warning me-2"></i>ODI</span>
+                                                <span class="badge bg-primary">Rank #{{ team.icc_ranking.odi }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item bg-transparent px-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span><i class="fas fa-trophy text-warning me-2"></i>T20</span>
+                                                <span class="badge bg-primary">Rank #{{ team.icc_ranking.t20 }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Key Players</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="list-group list-group-flush">
+                                        {% for player in team.key_players %}
+                                        <a href="{{ url_for('player_detail', player_id=player.id) }}" class="list-group-item list-group-item-action">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-0">{{ player.name }}</h6>
+                                                    <small class="text-muted">{{ player.role }}</small>
+                                                </div>
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {% if team.upcoming_matches %}
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Upcoming Matches</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="list-group list-group-flush">
+                                        {% for match in team.upcoming_matches %}
+                                        <a href="{{ url_for('match_detail', match_id=match.id) }}" class="list-group-item list-group-item-action">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-0">vs {{ match.opponent }}</h6>
+                                                    <small class="text-muted">{{ match.venue }}</small>
+                                                </div>
+                                                <small>{{ match.date }}</small>
+                                            </div>
+                                        </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Team Performance Statistics -->
+    <div class="row mb-4">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">Performance by Year</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="teamPerformanceChart" height="300" 
+                        data-labels="{{ team.performance_by_year.labels|tojson }}" 
+                        data-wins="{{ team.performance_by_year.wins|tojson }}" 
+                        data-losses="{{ team.performance_by_year.losses|tojson }}" 
+                        data-draws="{{ team.performance_by_year.draws|tojson }}">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">Head-to-Head Record</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="teamHeadToHeadChart" height="300"
+                        data-opponents="{{ team.head_to_head.opponents|tojson }}" 
+                        data-wins="{{ team.head_to_head.wins|tojson }}" 
+                        data-losses="{{ team.head_to_head.losses|tojson }}">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Team Matches -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Recent Matches</h5>
+                </div>
+                <div class="card-body">
+                    {% if matches|length > 0 %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Match</th>
+                                    <th>Tournament</th>
+                                    <th>Venue</th>
+                                    <th>Result</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for match in matches %}
+                                <tr>
+                                    <td>{{ match.date }}</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="team-badge me-1" style="background-color: {{ match.team1_logo_color }}; width: 30px; height: 30px; font-size: 0.7rem;">
+                                                {{ match.team1_id|upper }}
+                                            </div>
+                                            vs
+                                            <div class="team-badge ms-1" style="background-color: {{ match.team2_logo_color }}; width: 30px; height: 30px; font-size: 0.7rem;">
+                                                {{ match.team2_id|upper }}
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>{{ match.tournament }}</td>
+                                    <td>{{ match.venue }}</td>
+                                    <td>
+                                        <span class="badge {% if match.status == 'live' %}bg-danger{% elif match.status == 'completed' %}bg-success{% else %}bg-warning{% endif %}">
+                                            {{ match.status|capitalize }}
+                                        </span>
+                                        {% if match.result %}
+                                        <small class="d-block mt-1">{{ match.result }}</small>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <a href="{{ url_for('match_detail', match_id=match.id) }}" class="btn btn-sm btn-outline-primary">Details</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <div class="alert alert-info mb-0">
+                        No matches found for this team.
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/teams.js') }}"></script>
+{% endblock %}

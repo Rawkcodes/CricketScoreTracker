@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %}Cricket Teams{% endblock %}
+
+{% block content %}
+<div class="container teams-page">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card bg-dark text-light">
+                <div class="card-body p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h1 class="display-5 fw-bold mb-2">Cricket Teams</h1>
+                            <p class="fs-5 mb-4">Explore the top cricket teams from around the world and their performance statistics.</p>
+                        </div>
+                        <div class="col-md-4 d-none d-md-flex justify-content-center">
+                            <svg width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Rankings Chart -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Team Rankings</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="teamRankingChart" height="300" 
+                        data-teams="{{ teams|map(attribute='name')|list|tojson }}" 
+                        data-rankings="{{ teams|map(attribute='icc_ranking.odi')|list|tojson }}">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teams List -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">All Teams</h5>
+                    <div class="input-group input-group-sm w-auto">
+                        <span class="input-group-text">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" class="form-control" id="teamFilter" placeholder="Filter teams...">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+                        {% for team in teams %}
+                        <div class="col team-card" data-team-name="{{ team.name }}">
+                            <div class="card h-100 cricket-card">
+                                <div class="card-header text-center" style="background-color: {{ team.logo_color }};">
+                                    <h3 class="text-light display-3 my-2">{{ team.short_name }}</h3>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1">{{ team.name }}</h5>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="text-muted">Captain: {{ team.captain }}</small>
+                                        <small class="text-muted">Coach: {{ team.coach }}</small>
+                                    </div>
+                                    <p class="card-text small">{{ team.description|truncate(100) }}</p>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div>
+                                            <strong>ICC Rankings:</strong>
+                                            <ul class="list-unstyled ms-2 small">
+                                                <li>Test: #{{ team.icc_ranking.test }}</li>
+                                                <li>ODI: #{{ team.icc_ranking.odi }}</li>
+                                                <li>T20: #{{ team.icc_ranking.t20 }}</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <strong>Recent Form:</strong>
+                                            <div class="ms-2 mt-1">
+                                                {% for result in team.recent_form %}
+                                                <span class="badge {% if result == 'W' %}bg-success{% elif result == 'L' %}bg-danger{% else %}bg-warning{% endif %} me-1">{{ result }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="{{ url_for('team_detail', team_id=team.id) }}" class="btn btn-sm btn-primary w-100">View Team</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/teams.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,284 @@
+[
+  {
+    "id": "ind",
+    "name": "India",
+    "short_name": "IND",
+    "logo_color": "#0080FF",
+    "captain": "Rohit Sharma",
+    "coach": "Rahul Dravid",
+    "home_ground": "Narendra Modi Stadium, Ahmedabad",
+    "icc_ranking": {
+      "test": 1,
+      "odi": 2,
+      "t20": 2
+    },
+    "description": "The Indian cricket team is one of the most successful and popular cricket teams in the world. With a rich history dating back to 1932, India has become a dominant force in all formats of the game. They won the Cricket World Cup in 1983 and 2011, and the ICC T20 World Cup in 2007. The team is known for producing legendary batsmen and more recently, a formidable pace bowling attack.",
+    "recent_form": ["W", "W", "L", "W", "W"],
+    "performance_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wins": [25, 30, 15, 28, 32, 15],
+      "losses": [12, 15, 8, 10, 15, 5],
+      "draws": [3, 5, 2, 4, 3, 2]
+    },
+    "head_to_head": {
+      "opponents": ["Australia", "England", "South Africa", "New Zealand", "Pakistan", "West Indies"],
+      "wins": [30, 25, 20, 18, 15, 28],
+      "losses": [25, 22, 18, 15, 10, 15]
+    },
+    "key_players": [
+      {"id": "player1", "name": "Virat Kohli", "role": "Batsman"},
+      {"id": "player2", "name": "Rohit Sharma", "role": "Batsman"},
+      {"id": "player3", "name": "Jasprit Bumrah", "role": "Bowler"},
+      {"id": "player4", "name": "Ravindra Jadeja", "role": "All-rounder"}
+    ],
+    "upcoming_matches": [
+      {"id": "match3", "opponent": "Pakistan", "date": "2023-06-15", "venue": "Eden Gardens, Kolkata"}
+    ]
+  },
+  {
+    "id": "aus",
+    "name": "Australia",
+    "short_name": "AUS",
+    "logo_color": "#FFFF00",
+    "captain": "Pat Cummins",
+    "coach": "Andrew McDonald",
+    "home_ground": "Melbourne Cricket Ground",
+    "icc_ranking": {
+      "test": 2,
+      "odi": 1,
+      "t20": 4
+    },
+    "description": "The Australian cricket team is one of the most successful teams in cricketing history. They have won the Cricket World Cup a record five times and have dominated Test cricket for long periods. Known for their aggressive style of play and mental toughness, Australia has produced numerous cricket legends like Don Bradman, Shane Warne, and Ricky Ponting.",
+    "recent_form": ["L", "W", "W", "W", "L"],
+    "performance_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wins": [20, 28, 16, 30, 25, 12],
+      "losses": [15, 12, 7, 8, 15, 8],
+      "draws": [5, 4, 3, 3, 2, 1]
+    },
+    "head_to_head": {
+      "opponents": ["India", "England", "South Africa", "New Zealand", "Pakistan", "West Indies"],
+      "wins": [25, 32, 22, 20, 18, 30],
+      "losses": [30, 28, 15, 18, 10, 12]
+    },
+    "key_players": [
+      {"id": "player5", "name": "Steve Smith", "role": "Batsman"},
+      {"id": "player6", "name": "Pat Cummins", "role": "Bowler"},
+      {"id": "player7", "name": "Mitchell Starc", "role": "Bowler"},
+      {"id": "player8", "name": "David Warner", "role": "Batsman"}
+    ],
+    "upcoming_matches": []
+  },
+  {
+    "id": "eng",
+    "name": "England",
+    "short_name": "ENG",
+    "logo_color": "#0000FF",
+    "captain": "Jos Buttler",
+    "coach": "Brendon McCullum",
+    "home_ground": "Lord's Cricket Ground, London",
+    "icc_ranking": {
+      "test": 3,
+      "odi": 3,
+      "t20": 1
+    },
+    "description": "The England cricket team represents England and Wales in international cricket. As the pioneers of cricket, England has a rich cricketing heritage. They won the Cricket World Cup for the first time in 2019 in a dramatic final against New Zealand. England has revolutionized limited-overs cricket in recent years with their aggressive batting approach, particularly in ODIs and T20Is.",
+    "recent_form": ["W", "L", "W", "W", "W"],
+    "performance_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wins": [22, 35, 12, 25, 28, 14],
+      "losses": [18, 15, 10, 12, 15, 6],
+      "draws": [4, 2, 3, 5, 3, 2]
+    },
+    "head_to_head": {
+      "opponents": ["India", "Australia", "South Africa", "New Zealand", "Pakistan", "West Indies"],
+      "wins": [22, 28, 20, 18, 22, 25],
+      "losses": [25, 32, 18, 20, 15, 18]
+    },
+    "key_players": [
+      {"id": "player9", "name": "Jos Buttler", "role": "Wicketkeeper-Batsman"},
+      {"id": "player10", "name": "Joe Root", "role": "Batsman"},
+      {"id": "player11", "name": "Ben Stokes", "role": "All-rounder"},
+      {"id": "player12", "name": "Jofra Archer", "role": "Bowler"}
+    ],
+    "upcoming_matches": [
+      {"id": "match2", "opponent": "South Africa", "date": "2023-06-12", "venue": "Lord's Cricket Ground, London"}
+    ]
+  },
+  {
+    "id": "nz",
+    "name": "New Zealand",
+    "short_name": "NZ",
+    "logo_color": "#000000",
+    "captain": "Kane Williamson",
+    "coach": "Gary Stead",
+    "home_ground": "Eden Park, Auckland",
+    "icc_ranking": {
+      "test": 4,
+      "odi": 4,
+      "t20": 5
+    },
+    "description": "The New Zealand cricket team, also known as the Black Caps, has emerged as one of the most consistent teams in international cricket. They reached consecutive Cricket World Cup finals in 2015 and 2019, and won the inaugural World Test Championship in 2021. Known for their fair play and sportsmanship, New Zealand has earned respect across the cricketing world for their conduct on and off the field.",
+    "recent_form": ["W", "W", "L", "W", "L"],
+    "performance_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wins": [18, 22, 15, 25, 20, 10],
+      "losses": [12, 15, 8, 10, 12, 8],
+      "draws": [5, 3, 2, 4, 3, 2]
+    },
+    "head_to_head": {
+      "opponents": ["India", "Australia", "England", "South Africa", "Pakistan", "West Indies"],
+      "wins": [15, 18, 20, 15, 18, 22],
+      "losses": [18, 20, 18, 18, 12, 15]
+    },
+    "key_players": [
+      {"id": "player13", "name": "Kane Williamson", "role": "Batsman"},
+      {"id": "player14", "name": "Trent Boult", "role": "Bowler"},
+      {"id": "player15", "name": "Tim Southee", "role": "Bowler"},
+      {"id": "player16", "name": "Devon Conway", "role": "Batsman"}
+    ],
+    "upcoming_matches": [
+      {"id": "match3", "opponent": "Pakistan", "date": "2023-06-15", "venue": "Eden Gardens, Kolkata"}
+    ]
+  },
+  {
+    "id": "sa",
+    "name": "South Africa",
+    "short_name": "SA",
+    "logo_color": "#006633",
+    "captain": "Temba Bavuma",
+    "coach": "Shukri Conrad",
+    "home_ground": "The Wanderers Stadium, Johannesburg",
+    "icc_ranking": {
+      "test": 5,
+      "odi": 5,
+      "t20": 3
+    },
+    "description": "The South African cricket team, also known as the Proteas, has been one of the strongest cricket teams since their readmission to international cricket in 1991. Known for producing world-class fast bowlers and fielders, South Africa has consistently been among the top teams in all formats. Despite their talent, they have faced challenges in ICC tournaments, which has earned them an unfortunate 'chokers' tag in knockout matches.",
+    "recent_form": ["L", "W", "W", "L", "W"],
+    "performance_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wins": [20, 18, 12, 22, 25, 15],
+      "losses": [15, 20, 10, 15, 12, 8],
+      "draws": [3, 4, 2, 3, 5, 2]
+    },
+    "head_to_head": {
+      "opponents": ["India", "Australia", "England", "New Zealand", "Pakistan", "West Indies"],
+      "wins": [18, 15, 18, 18, 20, 22],
+      "losses": [20, 22, 20, 15, 15, 15]
+    },
+    "key_players": [
+      {"id": "player17", "name": "Kagiso Rabada", "role": "Bowler"},
+      {"id": "player18", "name": "Quinton de Kock", "role": "Wicketkeeper-Batsman"},
+      {"id": "player19", "name": "Anrich Nortje", "role": "Bowler"},
+      {"id": "player20", "name": "Aiden Markram", "role": "Batsman"}
+    ],
+    "upcoming_matches": [
+      {"id": "match2", "opponent": "England", "date": "2023-06-12", "venue": "Lord's Cricket Ground, London"}
+    ]
+  },
+  {
+    "id": "pak",
+    "name": "Pakistan",
+    "short_name": "PAK",
+    "logo_color": "#006600",
+    "captain": "Babar Azam",
+    "coach": "Mickey Arthur",
+    "home_ground": "National Stadium, Karachi",
+    "icc_ranking": {
+      "test": 6,
+      "odi": 6,
+      "t20": 6
+    },
+    "description": "The Pakistan cricket team is known for producing exceptional talent, particularly in fast bowling. They won the Cricket World Cup in 1992 and the ICC T20 World Cup in 2009. Pakistan cricket is characterized by its unpredictability – capable of beating any team on their day but also susceptible to dramatic collapses. They have produced legends like Imran Khan, Wasim Akram, and Waqar Younis.",
+    "recent_form": ["L", "L", "W", "W", "L"],
+    "performance_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wins": [18, 15, 12, 20, 22, 10],
+      "losses": [15, 18, 10, 15, 18, 12],
+      "draws": [3, 3, 2, 4, 2, 1]
+    },
+    "head_to_head": {
+      "opponents": ["India", "Australia", "England", "South Africa", "New Zealand", "West Indies"],
+      "wins": [10, 10, 15, 15, 12, 20],
+      "losses": [15, 18, 22, 20, 18, 15]
+    },
+    "key_players": [
+      {"id": "player21", "name": "Babar Azam", "role": "Batsman"},
+      {"id": "player22", "name": "Shaheen Afridi", "role": "Bowler"},
+      {"id": "player23", "name": "Mohammad Rizwan", "role": "Wicketkeeper-Batsman"},
+      {"id": "player24", "name": "Shadab Khan", "role": "All-rounder"}
+    ],
+    "upcoming_matches": [
+      {"id": "match3", "opponent": "New Zealand", "date": "2023-06-15", "venue": "Eden Gardens, Kolkata"}
+    ]
+  },
+  {
+    "id": "sl",
+    "name": "Sri Lanka",
+    "short_name": "SL",
+    "logo_color": "#0000FF",
+    "captain": "Dasun Shanaka",
+    "coach": "Chris Silverwood",
+    "home_ground": "R. Premadasa Stadium, Colombo",
+    "icc_ranking": {
+      "test": 7,
+      "odi": 8,
+      "t20": 9
+    },
+    "description": "The Sri Lankan cricket team rose to prominence in the 1990s and has since been a competitive force in international cricket. They won the Cricket World Cup in 1996 and the ICC T20 World Cup in 2014. Sri Lanka has produced some of the most unorthodox and effective cricketers, including Muttiah Muralitharan, Sanath Jayasuriya, and Kumar Sangakkara.",
+    "recent_form": ["W", "L", "W", "L", "W"],
+    "performance_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wins": [15, 12, 10, 18, 20, 12],
+      "losses": [18, 20, 12, 15, 15, 8],
+      "draws": [3, 2, 2, 3, 2, 2]
+    },
+    "head_to_head": {
+      "opponents": ["India", "Australia", "England", "South Africa", "Pakistan", "Bangladesh"],
+      "wins": [12, 10, 15, 15, 18, 22],
+      "losses": [22, 25, 20, 18, 15, 12]
+    },
+    "key_players": [
+      {"id": "player25", "name": "Wanindu Hasaranga", "role": "All-rounder"},
+      {"id": "player26", "name": "Charith Asalanka", "role": "Batsman"},
+      {"id": "player27", "name": "Dushmantha Chameera", "role": "Bowler"},
+      {"id": "player28", "name": "Kusal Mendis", "role": "Wicketkeeper-Batsman"}
+    ],
+    "upcoming_matches": []
+  },
+  {
+    "id": "ban",
+    "name": "Bangladesh",
+    "short_name": "BAN",
+    "logo_color": "#006633",
+    "captain": "Shakib Al Hasan",
+    "coach": "Chandika Hathurusingha",
+    "home_ground": "Shere Bangla National Stadium, Dhaka",
+    "icc_ranking": {
+      "test": 9,
+      "odi": 7,
+      "t20": 8
+    },
+    "description": "The Bangladesh cricket team has made significant progress since gaining Test status in 2000. Initially considered underdogs, they have registered notable victories against top teams, especially in home conditions. Bangladesh has performed well in recent ICC tournaments, reaching the quarterfinals of the 2015 Cricket World Cup and the semifinals of the 2017 Champions Trophy.",
+    "recent_form": ["L", "W", "L", "W", "L"],
+    "performance_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wins": [12, 15, 8, 18, 15, 10],
+      "losses": [20, 18, 15, 15, 18, 12],
+      "draws": [3, 2, 1, 3, 2, 1]
+    },
+    "head_to_head": {
+      "opponents": ["India", "Australia", "England", "South Africa", "Pakistan", "Sri Lanka"],
+      "wins": [5, 3, 8, 5, 5, 12],
+      "losses": [25, 20, 15, 18, 20, 22]
+    },
+    "key_players": [
+      {"id": "player29", "name": "Shakib Al Hasan", "role": "All-rounder"},
+      {"id": "player30", "name": "Mushfiqur Rahim", "role": "Wicketkeeper-Batsman"},
+      {"id": "player31", "name": "Mustafizur Rahman", "role": "Bowler"},
+      {"id": "player32", "name": "Liton Das", "role": "Batsman"}
+    ],
+    "upcoming_matches": []
+  }
+]

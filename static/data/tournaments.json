@@ -1,0 +1,103 @@
+[
+  {
+    "id": "wcc2023",
+    "name": "World Cricket Championship",
+    "short_name": "WCC",
+    "format": "One Day International",
+    "start_date": "2023-06-10",
+    "end_date": "2023-07-15",
+    "host_country": "Multiple",
+    "logo_color": "#0066CC",
+    "status": "ongoing",
+    "current_stage": "Group Stage",
+    "total_teams": 10,
+    "total_matches": 48,
+    "description": "The World Cricket Championship is the premier international cricket tournament held every four years. The 2023 edition features the top 10 cricketing nations competing for global supremacy in the 50-over format. The tournament is being hosted across multiple countries, with the final scheduled to be held at Lord's Cricket Ground in London.",
+    "matches": [
+      {"id": "match1", "teams": ["India", "Australia"], "date": "2023-06-10", "venue": "Melbourne Cricket Ground"},
+      {"id": "match2", "teams": ["England", "South Africa"], "date": "2023-06-12", "venue": "Lord's Cricket Ground"},
+      {"id": "match3", "teams": ["Pakistan", "New Zealand"], "date": "2023-06-15", "venue": "Eden Gardens"}
+    ],
+    "groups": {
+      "Group A": ["India", "Australia", "England", "South Africa", "Bangladesh"],
+      "Group B": ["Pakistan", "New Zealand", "Sri Lanka", "West Indies", "Afghanistan"]
+    },
+    "top_scorers": [
+      {"name": "Virat Kohli", "country": "India", "runs": 120},
+      {"name": "Steve Smith", "country": "Australia", "runs": 85},
+      {"name": "Joe Root", "country": "England", "runs": 35}
+    ],
+    "top_wicket_takers": [
+      {"name": "Jasprit Bumrah", "country": "India", "wickets": 3},
+      {"name": "Pat Cummins", "country": "Australia", "wickets": 1},
+      {"name": "Kagiso Rabada", "country": "South Africa", "wickets": 2}
+    ]
+  },
+  {
+    "id": "acc2023",
+    "name": "Asian Cricket Cup",
+    "short_name": "ACC",
+    "format": "Twenty20",
+    "start_date": "2023-05-15",
+    "end_date": "2023-05-30",
+    "host_country": "UAE",
+    "logo_color": "#006600",
+    "status": "completed",
+    "current_stage": "Completed",
+    "winner": "India",
+    "runner_up": "Pakistan",
+    "total_teams": 6,
+    "total_matches": 13,
+    "description": "The Asian Cricket Cup is the continental cricket championship for Asian nations. The 2023 edition was played in the T20 format as preparation for the upcoming T20 World Cup. The tournament featured six teams divided into two groups, with the top two teams from each group qualifying for the semifinals.",
+    "matches": [
+      {"id": "match4", "teams": ["India", "Pakistan"], "date": "2023-05-20", "venue": "Dubai International Stadium"},
+      {"id": "match5", "teams": ["Sri Lanka", "Bangladesh"], "date": "2023-05-22", "venue": "Sharjah Cricket Stadium"}
+    ],
+    "groups": {
+      "Group A": ["India", "Pakistan", "Hong Kong"],
+      "Group B": ["Sri Lanka", "Bangladesh", "Afghanistan"]
+    },
+    "top_scorers": [
+      {"name": "Virat Kohli", "country": "India", "runs": 276},
+      {"name": "Babar Azam", "country": "Pakistan", "runs": 210},
+      {"name": "Charith Asalanka", "country": "Sri Lanka", "runs": 168}
+    ],
+    "top_wicket_takers": [
+      {"name": "Hardik Pandya", "country": "India", "wickets": 7},
+      {"name": "Wanindu Hasaranga", "country": "Sri Lanka", "wickets": 9},
+      {"name": "Shaheen Afridi", "country": "Pakistan", "wickets": 6}
+    ]
+  },
+  {
+    "id": "ipl2023",
+    "name": "Indian Premier League",
+    "short_name": "IPL",
+    "format": "Twenty20",
+    "start_date": "2023-03-31",
+    "end_date": "2023-05-28",
+    "host_country": "India",
+    "logo_color": "#004080",
+    "status": "completed",
+    "current_stage": "Completed",
+    "winner": "Chennai Super Kings",
+    "runner_up": "Gujarat Titans",
+    "total_teams": 10,
+    "total_matches": 74,
+    "description": "The Indian Premier League is the most popular T20 cricket league in the world. The 2023 edition featured 10 teams competing in a round-robin league followed by playoffs. The tournament showcased top international talents alongside emerging Indian cricketers, continuing its tradition of high-quality cricket and entertainment.",
+    "teams": [
+      "Chennai Super Kings", "Mumbai Indians", "Royal Challengers Bangalore", "Kolkata Knight Riders",
+      "Delhi Capitals", "Punjab Kings", "Rajasthan Royals", "Sunrisers Hyderabad", 
+      "Gujarat Titans", "Lucknow Super Giants"
+    ],
+    "top_scorers": [
+      {"name": "Shubman Gill", "team": "Gujarat Titans", "runs": 890},
+      {"name": "Faf du Plessis", "team": "Royal Challengers Bangalore", "runs": 730},
+      {"name": "Devon Conway", "team": "Chennai Super Kings", "runs": 672}
+    ],
+    "top_wicket_takers": [
+      {"name": "Mohammed Shami", "team": "Gujarat Titans", "wickets": 28},
+      {"name": "Rashid Khan", "team": "Gujarat Titans", "wickets": 27},
+      {"name": "Piyush Chawla", "team": "Mumbai Indians", "wickets": 22}
+    ]
+  }
+]

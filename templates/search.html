@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Results for "{{ query }}"{% endblock %}
+
+{% block content %}
+<div class="container search-page">
+    <!-- Search Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body p-4">
+                    <h1 class="h3 mb-3">Search Results for "{{ query }}"</h1>
+                    <form action="{{ url_for('search') }}" method="get" class="mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="q" id="searchInput" value="{{ query }}" placeholder="Search for matches, teams, players...">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search me-1"></i> Search
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <p>
+                        <span class="search-count fw-bold">{{ results.matches|length + results.teams|length + results.players|length }}</span> results found
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Search Results -->
+    <div class="row">
+        <div class="col-12 mb-4">
+            <ul class="nav nav-tabs search-tab" id="searchTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-target="#matchesResults" type="button" role="tab">
+                        Matches <span class="badge bg-secondary">{{ results.matches|length }}</span>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-target="#teamsResults" type="button" role="tab">
+                        Teams <span class="badge bg-secondary">{{ results.teams|length }}</span>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-target="#playersResults" type="button" role="tab">
+                        Players <span class="badge bg-secondary">{{ results.players|length }}</span>
+                    </button>
+                </li>
+            </ul>
+            
+            <div class="tab-content mt-3">
+                <!-- Matches Results -->
+                <div class="tab-pane fade show active search-results-section matches-results" id="matchesResults" role="tabpanel">
+                    {% if results.matches|length > 0 %}
+                    <div class="list-group">
+                        {% for match in results.matches %}
+                        <a href="{{ url_for('match_detail', match_id=match.id) }}" class="list-group-item list-group-item-action search-result">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-1">{{ match.team1 }} vs {{ match.team2 }}</h5>
+                                    <p class="mb-1">
+                                        <span class="badge {% if match.status == 'live' %}bg-danger{% elif match.status == 'completed' %}bg-success{% else %}bg-warning{% endif %} me-2">
+                                            {{ match.status|capitalize }}
+                                        </span>
+                                        {{ match.tournament }} | {{ match.date }}
+                                    </p>
+                                    <small>
+                                        <i class="fas fa-map-marker-alt me-1"></i> {{ match.venue }}, {{ match.location }}
+                                    </small>
+                                </div>
+                                <div class="text-end">
+                                    <div class="mb-2">
+                                        <strong>{{ match.team1_score }}</strong> | <strong>{{ match.team2_score }}</strong>
+                                    </div>
+                                    {% if match.result %}
+                                    <small class="text-muted">{{ match.result }}</small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="alert alert-info no-results">
+                        No match results found for "{{ query }}". Please try a different search term.
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <!-- Teams Results -->
+                <div class="tab-pane fade search-results-section teams-results" id="teamsResults" role="tabpanel">
+                    {% if results.teams|length > 0 %}
+                    <div class="list-group">
+                        {% for team in results.teams %}
+                        <a href="{{ url_for('team_detail', team_id=team.id) }}" class="list-group-item list-group-item-action search-result">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="team-badge me-3" style="background-color: {{ team.logo_color }};">
+                                            {{ team.short_name }}
+                                        </div>
+                                        <h5 class="mb-1">{{ team.name }}</h5>
+                                    </div>
+                                    <p class="mb-1">Captain: {{ team.captain }} | Coach: {{ team.coach }}</p>
+                                    <small>{{ team.description|truncate(100) }}</small>
+                                </div>
+                                <div>
+                                    <small class="d-block mb-1">Rankings:</small>
+                                    <span class="badge bg-primary me-1">Test #{{ team.icc_ranking.test }}</span>
+                                    <span class="badge bg-primary me-1">ODI #{{ team.icc_ranking.odi }}</span>
+                                    <span class="badge bg-primary">T20 #{{ team.icc_ranking.t20 }}</span>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="alert alert-info no-results">
+                        No team results found for "{{ query }}". Please try a different search term.
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <!-- Players Results -->
+                <div class="tab-pane fade search-results-section players-results" id="playersResults" role="tabpanel">
+                    {% if results.players|length > 0 %}
+                    <div class="list-group">
+                        {% for player in results.players %}
+                        <a href="{{ url_for('player_detail', player_id=player.id) }}" class="list-group-item list-group-item-action search-result">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-1">{{ player.name }}</h5>
+                                    <p class="mb-1">
+                                        <span class="badge bg-primary me-2">{{ player.country }}</span>
+                                        <span class="badge bg-secondary">{{ player.role }}</span>
+                                    </p>
+                                    <small>{{ player.bio|truncate(100) }}</small>
+                                </div>
+                                <div class="text-end">
+                                    <div class="mb-1">
+                                        <small class="d-block">Matches: {{ player.career_stats.test.matches + player.career_stats.odi.matches + player.career_stats.t20.matches }}</small>
+                                        {% if player.role == 'Batsman' or player.role == 'All-rounder' %}
+                                        <small class="d-block">Runs: {{ player.career_stats.test.runs + player.career_stats.odi.runs + player.career_stats.t20.runs }}</small>
+                                        {% endif %}
+                                        {% if player.role == 'Bowler' or player.role == 'All-rounder' %}
+                                        <small class="d-block">Wickets: {{ player.career_stats.test.wickets + player.career_stats.odi.wickets + player.career_stats.t20.wickets }}</small>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="alert alert-info no-results">
+                        No player results found for "{{ query }}". Please try a different search term.
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/search.js') }}"></script>
+{% endblock %}

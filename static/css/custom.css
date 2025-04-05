@@ -1,0 +1,122 @@
+/* Custom styles for Cricket Score App */
+
+/* Cricket themed colors */
+:root {
+  --cricket-green: #0a5c36;
+  --cricket-light-green: #4caf50;
+  --cricket-pitch: #c8a165;
+  --cricket-red: #e53935;
+}
+
+/* Common styles */
+.cricket-card {
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.cricket-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Match status indicators */
+.match-live {
+  color: var(--bs-danger);
+  animation: pulse 1.5s infinite;
+}
+
+.match-completed {
+  color: var(--bs-success);
+}
+
+.match-upcoming {
+  color: var(--bs-warning);
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Team badges */
+.team-badge {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  color: white;
+}
+
+/* Player card */
+.player-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.player-card .player-info {
+  padding: 15px;
+}
+
+/* Scoreboard styling */
+.scoreboard {
+  font-family: 'Courier New', monospace;
+}
+
+.batsman-row.striker {
+  background-color: rgba(var(--bs-info-rgb), 0.1);
+}
+
+.cricket-table th {
+  position: sticky;
+  top: 0;
+  background-color: var(--bs-dark);
+  z-index: 1;
+}
+
+/* Match detail page */
+.commentary-box {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.commentary-item {
+  border-left: 3px solid var(--bs-secondary);
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.commentary-item.highlight {
+  border-left-color: var(--bs-warning);
+}
+
+.commentary-item.wicket {
+  border-left-color: var(--bs-danger);
+}
+
+.commentary-item.boundary {
+  border-left-color: var(--bs-info);
+}
+
+/* Search page */
+.search-result {
+  padding: 10px;
+  border-bottom: 1px solid var(--bs-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  
+  .hide-on-mobile {
+    display: none;
+  }
+}

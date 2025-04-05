@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ player.name }} - Player Profile{% endblock %}
+
+{% block content %}
+<div class="container players-page">
+    <!-- Player Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header text-center text-light py-4" style="background: linear-gradient(45deg, var(--bs-primary), var(--bs-info));">
+                    <h1 class="display-4 fw-bold mb-0">{{ player.name }}</h1>
+                    <p class="lead mb-0">{{ player.country }} | {{ player.role }}</p>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="lead">{{ player.bio }}</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-3">
+                                    <h5 class="mb-3">Personal Details</h5>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item bg-transparent px-0">
+                                            <strong>Date of Birth:</strong> {{ player.date_of_birth }}
+                                        </li>
+                                        <li class="list-group-item bg-transparent px-0">
+                                            <strong>Batting Style:</strong> {{ player.batting_style }}
+                                        </li>
+                                        <li class="list-group-item bg-transparent px-0">
+                                            <strong>Bowling Style:</strong> {{ player.bowling_style }}
+                                        </li>
+                                        <li class="list-group-item bg-transparent px-0">
+                                            <strong>Role:</strong> {{ player.role }}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <h5 class="mb-3">Key Achievements</h5>
+                                    <ul class="list-group list-group-flush">
+                                        {% for achievement in player.achievements %}
+                                        <li class="list-group-item bg-transparent px-0">
+                                            <i class="fas fa-trophy text-warning me-2"></i> {{ achievement }}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Career Statistics</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Format</th>
+                                                    <th class="text-end">M</th>
+                                                    <th class="text-end">Runs</th>
+                                                    <th class="text-end">Avg</th>
+                                                    <th class="text-end">Wkts</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Test</td>
+                                                    <td class="text-end">{{ player.career_stats.test.matches }}</td>
+                                                    <td class="text-end">{{ player.career_stats.test.runs }}</td>
+                                                    <td class="text-end">{{ player.career_stats.test.average }}</td>
+                                                    <td class="text-end">{{ player.career_stats.test.wickets }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ODI</td>
+                                                    <td class="text-end">{{ player.career_stats.odi.matches }}</td>
+                                                    <td class="text-end">{{ player.career_stats.odi.runs }}</td>
+                                                    <td class="text-end">{{ player.career_stats.odi.average }}</td>
+                                                    <td class="text-end">{{ player.career_stats.odi.wickets }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>T20I</td>
+                                                    <td class="text-end">{{ player.career_stats.t20.matches }}</td>
+                                                    <td class="text-end">{{ player.career_stats.t20.runs }}</td>
+                                                    <td class="text-end">{{ player.career_stats.t20.average }}</td>
+                                                    <td class="text-end">{{ player.career_stats.t20.wickets }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Recent Performances</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="list-group list-group-flush">
+                                        {% for performance in player.recent_performances %}
+                                        <div class="list-group-item">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-0">vs {{ performance.against }}</h6>
+                                                    <small class="text-muted">{{ performance.match_type }} | {{ performance.date }}</small>
+                                                </div>
+                                                <div>
+                                                    {% if performance.runs > 0 %}
+                                                    <span class="badge bg-primary me-1">{{ performance.runs }} runs</span>
+                                                    {% endif %}
+                                                    {% if performance.wickets > 0 %}
+                                                    <span class="badge bg-success">{{ performance.wickets }} wkts</span>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Player Statistics -->
+    <div class="row mb-4">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">Batting Performance by Year</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="playerBattingChart" height="300" 
+                        data-labels="{{ player.batting_stats_by_year.labels|tojson }}" 
+                        data-runs="{{ player.batting_stats_by_year.runs|tojson }}" 
+                        data-averages="{{ player.batting_stats_by_year.averages|tojson }}">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">Bowling Performance by Year</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="playerBowlingChart" height="300"
+                        data-labels="{{ player.bowling_stats_by_year.labels|tojson }}" 
+                        data-wickets="{{ player.bowling_stats_by_year.wickets|tojson }}" 
+                        data-economy="{{ player.bowling_stats_by_year.economy|tojson }}">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Career Progression -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Career Progression</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="playerCareerChart" height="300"
+                        data-years="{{ player.career_progression.years|tojson }}" 
+                        data-runs="{{ player.career_progression.runs|tojson }}" 
+                        data-wickets="{{ player.career_progression.wickets|tojson }}" 
+                        data-matches="{{ player.career_progression.matches|tojson }}">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Career Highlights and Records -->
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Career Highlights</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <h1 class="display-4 mb-3 text-primary">
+                                        {% if player.role == 'Batsman' %}
+                                        {{ player.career_stats.test.centuries + player.career_stats.odi.centuries + player.career_stats.t20.centuries }}
+                                        {% elif player.role == 'Bowler' %}
+                                        {{ player.career_stats.test.wickets + player.career_stats.odi.wickets + player.career_stats.t20.wickets }}
+                                        {% else %}
+                                        {{ player.career_stats.test.matches + player.career_stats.odi.matches + player.career_stats.t20.matches }}
+                                        {% endif %}
+                                    </h1>
+                                    <h5 class="mb-0">
+                                        {% if player.role == 'Batsman' %}
+                                        Career Centuries
+                                        {% elif player.role == 'Bowler' %}
+                                        Career Wickets
+                                        {% else %}
+                                        International Matches
+                                        {% endif %}
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <h1 class="display-4 mb-3 text-success">
+                                        {% if player.role == 'Batsman' %}
+                                        {{ player.career_stats.test.highest }}
+                                        {% elif player.role == 'Bowler' %}
+                                        {{ player.career_stats.test.economy }}
+                                        {% else %}
+                                        {{ player.career_stats.test.runs + player.career_stats.odi.runs + player.career_stats.t20.runs }}
+                                        {% endif %}
+                                    </h1>
+                                    <h5 class="mb-0">
+                                        {% if player.role == 'Batsman' %}
+                                        Highest Score (Test)
+                                        {% elif player.role == 'Bowler' %}
+                                        Best Economy (Test)
+                                        {% else %}
+                                        Career Runs
+                                        {% endif %}
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <h1 class="display-4 mb-3 text-warning">
+                                        {% if player.role == 'Batsman' %}
+                                        {{ player.career_stats.odi.average }}
+                                        {% elif player.role == 'Bowler' %}
+                                        {{ player.career_stats.odi.wickets / player.career_stats.odi.matches if player.career_stats.odi.matches > 0 else 0 }}
+                                        {% else %}
+                                        {{ player.career_stats.test.wickets + player.career_stats.odi.wickets + player.career_stats.t20.wickets }}
+                                        {% endif %}
+                                    </h1>
+                                    <h5 class="mb-0">
+                                        {% if player.role == 'Batsman' %}
+                                        Batting Average (ODI)
+                                        {% elif player.role == 'Bowler' %}
+                                        Wickets Per Match (ODI)
+                                        {% else %}
+                                        Career Wickets
+                                        {% endif %}
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/players.js') }}"></script>
+{% endblock %}

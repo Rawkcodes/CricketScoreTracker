@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+{% block title %}Cricket Players{% endblock %}
+
+{% block content %}
+<div class="container players-page">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card bg-dark text-light">
+                <div class="card-body p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h1 class="display-5 fw-bold mb-2">Cricket Players</h1>
+                            <p class="fs-5 mb-4">Explore player profiles, statistics, and career highlights of top cricket stars.</p>
+                        </div>
+                        <div class="col-md-4 d-none d-md-flex justify-content-center">
+                            <svg width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Players -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Featured Players</h5>
+                </div>
+                <div class="card-body pb-0">
+                    <div class="row">
+                        {% for player in players[:5] %}
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 cricket-card">
+                                <div class="card-header text-light text-center py-3" style="background-color: {{ player.batting_stats_by_year.runs|sum / 1000 * 120 |round|int }}deg, var(--bs-primary), var(--bs-info));">
+                                    <div class="display-1 mb-0">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                    <h5 class="mb-0 mt-2">{{ player.name }}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <span><i class="fas fa-flag me-1"></i> {{ player.country }}</span>
+                                        <span><i class="fas fa-user-tag me-1"></i> {{ player.role }}</span>
+                                    </div>
+                                    <p class="card-text small">{{ player.bio|truncate(150) }}</p>
+                                    
+                                    <h6 class="mt-3 mb-2">Career Stats</h6>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Format</th>
+                                                    <th class="text-end">Matches</th>
+                                                    <th class="text-end">Runs</th>
+                                                    <th class="text-end">Wickets</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Test</td>
+                                                    <td class="text-end">{{ player.career_stats.test.matches }}</td>
+                                                    <td class="text-end">{{ player.career_stats.test.runs }}</td>
+                                                    <td class="text-end">{{ player.career_stats.test.wickets }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ODI</td>
+                                                    <td class="text-end">{{ player.career_stats.odi.matches }}</td>
+                                                    <td class="text-end">{{ player.career_stats.odi.runs }}</td>
+                                                    <td class="text-end">{{ player.career_stats.odi.wickets }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>T20</td>
+                                                    <td class="text-end">{{ player.career_stats.t20.matches }}</td>
+                                                    <td class="text-end">{{ player.career_stats.t20.runs }}</td>
+                                                    <td class="text-end">{{ player.career_stats.t20.wickets }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="{{ url_for('player_detail', player_id=player.id) }}" class="btn btn-primary w-100">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Players -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">All Players</h5>
+                    <div class="input-group input-group-sm w-auto">
+                        <span class="input-group-text">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" class="form-control" id="playerFilter" placeholder="Filter players...">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                        {% for player in players %}
+                        <div class="col player-card" data-player-name="{{ player.name }}" data-player-country="{{ player.country }}">
+                            <div class="card h-100 cricket-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <h5 class="card-title mb-0">{{ player.name }}</h5>
+                                            <p class="text-muted mb-0">{{ player.role }}</p>
+                                        </div>
+                                        <span class="badge" style="background-color: {{ player.country_id|default('primary', true) }};">{{ player.country }}</span>
+                                    </div>
+                                    
+                                    <div class="row mb-2">
+                                        <div class="col-6">
+                                            <strong>Matches:</strong> {{ player.career_stats.test.matches + player.career_stats.odi.matches + player.career_stats.t20.matches }}
+                                        </div>
+                                        <div class="col-6">
+                                            <strong>DOB:</strong> {{ player.date_of_birth }}
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-6">
+                                            <strong>Batting:</strong> {{ player.batting_style }}
+                                        </div>
+                                        <div class="col-6">
+                                            <strong>Bowling:</strong> {{ player.bowling_style }}
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-between mt-auto">
+                                        <div>
+                                            <small class="text-muted">
+                                                <i class="fas fa-cricket-bat-ball me-1"></i>
+                                                {% if player.role == 'Batsman' or player.role == 'All-rounder' %}
+                                                {{ player.career_stats.test.runs + player.career_stats.odi.runs + player.career_stats.t20.runs }} runs
+                                                {% else %}
+                                                {{ player.career_stats.test.wickets + player.career_stats.odi.wickets + player.career_stats.t20.wickets }} wickets
+                                                {% endif %}
+                                            </small>
+                                        </div>
+                                        <a href="{{ url_for('player_detail', player_id=player.id) }}" class="btn btn-sm btn-outline-primary">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/players.js') }}"></script>
+{% endblock %}

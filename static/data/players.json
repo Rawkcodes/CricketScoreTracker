@@ -1,0 +1,362 @@
+[
+  {
+    "id": "player1",
+    "name": "Virat Kohli",
+    "country": "India",
+    "country_id": "ind",
+    "date_of_birth": "1988-11-05",
+    "role": "Batsman",
+    "batting_style": "Right-handed",
+    "bowling_style": "Right-arm medium",
+    "bio": "Virat Kohli is considered one of the greatest batsmen of his generation. Known for his aggressive batting style and chase mastery, he has broken numerous records across all formats. He captained India from 2014 to 2022, leading the team to significant victories. His passion and intensity on the field have made him a fan favorite worldwide.",
+    "career_stats": {
+      "test": {
+        "matches": 111,
+        "runs": 8416,
+        "highest": 254,
+        "average": 49.95,
+        "centuries": 27,
+        "fifties": 29,
+        "wickets": 0,
+        "economy": 0
+      },
+      "odi": {
+        "matches": 275,
+        "runs": 12898,
+        "highest": 183,
+        "average": 57.32,
+        "centuries": 46,
+        "fifties": 64,
+        "wickets": 4,
+        "economy": 6.22
+      },
+      "t20": {
+        "matches": 115,
+        "runs": 4008,
+        "highest": 122,
+        "average": 52.73,
+        "centuries": 1,
+        "fifties": 37,
+        "wickets": 0,
+        "economy": 0
+      }
+    },
+    "teams": ["ind"],
+    "batting_stats_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "runs": [2735, 2455, 842, 964, 1566, 890],
+      "averages": [68.37, 58.45, 31.19, 37.07, 40.15, 44.50]
+    },
+    "bowling_stats_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wickets": [0, 0, 0, 0, 0, 0],
+      "economy": [0, 0, 0, 0, 0, 0]
+    },
+    "career_progression": {
+      "years": ["2008", "2010", "2012", "2014", "2016", "2018", "2020", "2022", "2023"],
+      "runs": [159, 2467, 7106, 12064, 17157, 22030, 23226, 24550, 25322],
+      "wickets": [0, 1, 2, 3, 4, 4, 4, 4, 4],
+      "matches": [8, 66, 146, 243, 348, 440, 484, 528, 546]
+    },
+    "recent_performances": [
+      {"against": "Australia", "match_type": "ODI", "date": "2023-03-22", "runs": 75, "wickets": 0},
+      {"against": "England", "match_type": "Test", "date": "2023-02-15", "runs": 120, "wickets": 0},
+      {"against": "New Zealand", "match_type": "ODI", "date": "2023-01-24", "runs": 85, "wickets": 0}
+    ],
+    "achievements": [
+      "ICC Cricketer of the Year (2017, 2018)",
+      "ICC ODI Player of the Year (2012, 2017, 2018)",
+      "Wisden Leading Cricketer in the World (2016, 2017, 2018)",
+      "Rajiv Gandhi Khel Ratna Award (2018)",
+      "Padma Shri (2017)"
+    ]
+  },
+  {
+    "id": "player2",
+    "name": "Rohit Sharma",
+    "country": "India",
+    "country_id": "ind",
+    "date_of_birth": "1987-04-30",
+    "role": "Batsman",
+    "batting_style": "Right-handed",
+    "bowling_style": "Right-arm off break",
+    "bio": "Rohit Sharma is known as 'The Hitman' for his ability to hit massive sixes with elegance. Current captain of the Indian cricket team, he holds the record for the highest individual score in ODIs (264) and has scored three double centuries in the format. Known for his calm leadership and tactical acumen, he has led Mumbai Indians to multiple IPL titles.",
+    "career_stats": {
+      "test": {
+        "matches": 49,
+        "runs": 3677,
+        "highest": 212,
+        "average": 46.54,
+        "centuries": 10,
+        "fifties": 16,
+        "wickets": 2,
+        "economy": 5.32
+      },
+      "odi": {
+        "matches": 241,
+        "runs": 9837,
+        "highest": 264,
+        "average": 48.70,
+        "centuries": 30,
+        "fifties": 48,
+        "wickets": 8,
+        "economy": 5.94
+      },
+      "t20": {
+        "matches": 146,
+        "runs": 3853,
+        "highest": 118,
+        "average": 31.32,
+        "centuries": 4,
+        "fifties": 29,
+        "wickets": 1,
+        "economy": 9.75
+      }
+    },
+    "teams": ["ind"],
+    "batting_stats_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "runs": [1986, 1808, 517, 906, 1377, 840],
+      "averages": [58.41, 53.17, 34.46, 43.14, 45.90, 42.00]
+    },
+    "bowling_stats_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wickets": [1, 0, 0, 1, 0, 0],
+      "economy": [6.0, 0, 0, 5.5, 0, 0]
+    },
+    "career_progression": {
+      "years": ["2007", "2010", "2013", "2016", "2019", "2021", "2023"],
+      "runs": [159, 1586, 5168, 8541, 12829, 14684, 17367],
+      "wickets": [0, 2, 6, 8, 9, 10, 11],
+      "matches": [8, 70, 147, 238, 321, 387, 436]
+    },
+    "recent_performances": [
+      {"against": "Australia", "match_type": "ODI", "date": "2023-03-22", "runs": 42, "wickets": 0},
+      {"against": "England", "match_type": "Test", "date": "2023-02-15", "runs": 88, "wickets": 0},
+      {"against": "New Zealand", "match_type": "ODI", "date": "2023-01-24", "runs": 101, "wickets": 0}
+    ],
+    "achievements": [
+      "Most double centuries in ODIs (3)",
+      "Highest individual score in ODIs (264)",
+      "Most centuries in a single World Cup (5 in 2019)",
+      "Joint-fastest T20I century (35 balls)",
+      "Arjuna Award (2015)"
+    ]
+  },
+  {
+    "id": "player3",
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "country_id": "ind",
+    "date_of_birth": "1993-12-06",
+    "role": "Bowler",
+    "batting_style": "Right-handed",
+    "bowling_style": "Right-arm fast",
+    "bio": "Jasprit Bumrah is regarded as one of the best fast bowlers in modern cricket. His unorthodox action, precise yorkers, and ability to bowl under pressure make him a valuable asset to the Indian team. He rose to prominence through the IPL and quickly established himself as India's premier fast bowler across all formats. Known for his economical bowling at the death, he is often compared to legends like Wasim Akram for his skill with the ball.",
+    "career_stats": {
+      "test": {
+        "matches": 32,
+        "runs": 300,
+        "highest": 31,
+        "average": 7.50,
+        "centuries": 0,
+        "fifties": 0,
+        "wickets": 141,
+        "economy": 2.69
+      },
+      "odi": {
+        "matches": 73,
+        "runs": 19,
+        "highest": 10,
+        "average": 3.17,
+        "centuries": 0,
+        "fifties": 0,
+        "wickets": 131,
+        "economy": 4.63
+      },
+      "t20": {
+        "matches": 61,
+        "runs": 4,
+        "highest": 2,
+        "average": 2.00,
+        "centuries": 0,
+        "fifties": 0,
+        "wickets": 74,
+        "economy": 6.62
+      }
+    },
+    "teams": ["ind"],
+    "batting_stats_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "runs": [42, 75, 4, 38, 65, 10],
+      "averages": [4.2, 6.25, 2.0, 5.42, 7.22, 3.33]
+    },
+    "bowling_stats_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wickets": [48, 58, 27, 41, 52, 20],
+      "economy": [4.03, 4.17, 4.50, 3.92, 3.88, 4.10]
+    },
+    "career_progression": {
+      "years": ["2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"],
+      "runs": [10, 40, 82, 157, 161, 199, 264, 274],
+      "wickets": [19, 56, 104, 162, 189, 230, 282, 302],
+      "matches": [14, 39, 65, 95, 112, 138, 159, 166]
+    },
+    "recent_performances": [
+      {"against": "Australia", "match_type": "ODI", "date": "2023-03-22", "runs": 0, "wickets": 3},
+      {"against": "England", "match_type": "Test", "date": "2023-02-15", "runs": 12, "wickets": 5},
+      {"against": "New Zealand", "match_type": "ODI", "date": "2023-01-24", "runs": 0, "wickets": 2}
+    ],
+    "achievements": [
+      "ICC World ODI XI (2019)",
+      "Wisden Cricketer of the Year (2022)",
+      "Fastest Indian to 50 ODI wickets",
+      "First Asian to take 5 wickets in a Test innings in South Africa, England, Australia, and West Indies",
+      "Number 1 T20I bowler in ICC rankings (2020)"
+    ]
+  },
+  {
+    "id": "player4",
+    "name": "Ravindra Jadeja",
+    "country": "India",
+    "country_id": "ind",
+    "date_of_birth": "1988-12-06",
+    "role": "All-rounder",
+    "batting_style": "Left-handed",
+    "bowling_style": "Left-arm orthodox",
+    "bio": "Ravindra Jadeja is one of cricket's premier all-rounders, excelling with bat, ball, and in the field. His accurate left-arm spin bowling, lower-order batting contributions, and electric fielding make him a three-dimensional player. He has been a consistent performer for India across all formats and is often referred to as 'Sir Jadeja' by fans for his all-round abilities.",
+    "career_stats": {
+      "test": {
+        "matches": 66,
+        "runs": 2684,
+        "highest": 175,
+        "average": 36.27,
+        "centuries": 3,
+        "fifties": 18,
+        "wickets": 268,
+        "economy": 2.44
+      },
+      "odi": {
+        "matches": 171,
+        "runs": 2531,
+        "highest": 87,
+        "average": 32.44,
+        "centuries": 0,
+        "fifties": 13,
+        "wickets": 190,
+        "economy": 4.92
+      },
+      "t20": {
+        "matches": 64,
+        "runs": 531,
+        "highest": 46,
+        "average": 22.13,
+        "centuries": 0,
+        "fifties": 0,
+        "wickets": 51,
+        "economy": 7.08
+      }
+    },
+    "teams": ["ind"],
+    "batting_stats_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "runs": [425, 485, 259, 336, 419, 332],
+      "averages": [30.35, 35.84, 28.77, 33.60, 34.91, 36.88]
+    },
+    "bowling_stats_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wickets": [35, 43, 29, 38, 45, 32],
+      "economy": [4.42, 4.55, 4.68, 4.28, 4.32, 4.25]
+    },
+    "career_progression": {
+      "years": ["2009", "2012", "2015", "2017", "2019", "2021", "2023"],
+      "runs": [163, 762, 1834, 2756, 3726, 4518, 5746],
+      "wickets": [29, 96, 207, 302, 388, 456, 509],
+      "matches": [22, 77, 145, 197, 248, 281, 301]
+    },
+    "recent_performances": [
+      {"against": "Australia", "match_type": "Test", "date": "2023-03-09", "runs": 70, "wickets": 4},
+      {"against": "England", "match_type": "ODI", "date": "2023-02-01", "runs": 45, "wickets": 2},
+      {"against": "Sri Lanka", "match_type": "T20", "date": "2023-01-07", "runs": 22, "wickets": 3}
+    ],
+    "achievements": [
+      "ICC World Test XI (2016, 2021)",
+      "Number 1 in ICC Test all-rounder rankings (2017, 2022)",
+      "Fastest left-arm spinner to 150 Test wickets",
+      "Most runs in a Test innings by a No. 7 Indian batsman (175* vs SL, 2022)",
+      "Arjuna Award (2019)"
+    ]
+  },
+  {
+    "id": "player5",
+    "name": "Steve Smith",
+    "country": "Australia",
+    "country_id": "aus",
+    "date_of_birth": "1989-06-02",
+    "role": "Batsman",
+    "batting_style": "Right-handed",
+    "bowling_style": "Right-arm leg break",
+    "bio": "Steve Smith is widely regarded as one of the greatest batsmen of the modern era. Beginning his career as a leg-spinner, he transformed into a world-class batsman with an unorthodox but highly effective technique. His remarkable concentration and adaptability across all conditions have drawn comparisons to cricket legend Don Bradman. Despite a 12-month ban in 2018 due to his involvement in the ball-tampering incident, Smith made a strong comeback, continuing his run-scoring spree at the highest level.",
+    "career_stats": {
+      "test": {
+        "matches": 99,
+        "runs": 9113,
+        "highest": 239,
+        "average": 58.41,
+        "centuries": 30,
+        "fifties": 37,
+        "wickets": 18,
+        "economy": 3.82
+      },
+      "odi": {
+        "matches": 140,
+        "runs": 4810,
+        "highest": 164,
+        "average": 43.34,
+        "centuries": 12,
+        "fifties": 29,
+        "wickets": 27,
+        "economy": 5.54
+      },
+      "t20": {
+        "matches": 63,
+        "runs": 1094,
+        "highest": 90,
+        "average": 25.56,
+        "centuries": 0,
+        "fifties": 4,
+        "wickets": 5,
+        "economy": 8.17
+      }
+    },
+    "teams": ["aus"],
+    "batting_stats_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "runs": [1018, 1553, 540, 945, 1309, 759],
+      "averages": [42.41, 74.23, 38.57, 47.25, 54.54, 50.60]
+    },
+    "bowling_stats_by_year": {
+      "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
+      "wickets": [0, 1, 0, 0, 2, 0],
+      "economy": [0, 4.50, 0, 0, 3.75, 0]
+    },
+    "career_progression": {
+      "years": ["2010", "2013", "2015", "2017", "2019", "2021", "2023"],
+      "runs": [187, 1656, 4099, 7496, 11729, 13619, 15017],
+      "wickets": [3, 11, 25, 38, 44, 48, 50],
+      "matches": [8, 50, 117, 198, 283, 341, 377]
+    },
+    "recent_performances": [
+      {"against": "England", "match_type": "Test", "date": "2023-07-19", "runs": 110, "wickets": 0},
+      {"against": "India", "match_type": "ODI", "date": "2023-03-22", "runs": 85, "wickets": 0},
+      {"against": "South Africa", "match_type": "Test", "date": "2023-01-04", "runs": 104, "wickets": 0}
+    ],
+    "achievements": [
+      "ICC Test Player of the Decade (2011-2020)",
+      "ICC Test Player of the Year (2015, 2017, 2018)",
+      "Wisden Cricketer of the Year (2015)",
+      "Australian Test Player of the Year (2015, 2018, 2021)",
+      "Fastest batsman to reach 7,000 Test runs (126 innings)"
+    ]
+  }
+]

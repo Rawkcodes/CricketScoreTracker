@@ -1,0 +1,435 @@
+[
+  {
+    "id": "match1",
+    "tournament": "World Cricket Championship",
+    "tournament_id": "wcc2023",
+    "match_number": 1,
+    "status": "completed",
+    "match_type": "ODI",
+    "venue": "Melbourne Cricket Ground",
+    "location": "Melbourne, Australia",
+    "date": "2023-06-10",
+    "team1": "India",
+    "team1_id": "ind",
+    "team1_logo_color": "#0080FF",
+    "team2": "Australia",
+    "team2_id": "aus",
+    "team2_logo_color": "#FFFF00",
+    "team1_score": "285/7",
+    "team2_score": "279/10",
+    "overs": 50,
+    "result": "India won by 6 runs",
+    "man_of_match": "Virat Kohli",
+    "team1_innings": {
+      "total": 285,
+      "wickets": 7,
+      "overs": "50.0",
+      "extras": 12,
+      "run_rate": 5.7,
+      "batting": [
+        {"name": "Rohit Sharma", "runs": 65, "balls": 70, "fours": 7, "sixes": 2, "strike_rate": 92.86, "how_out": "c Smith b Starc", "status": "out"},
+        {"name": "Shikhar Dhawan", "runs": 35, "balls": 45, "fours": 4, "sixes": 0, "strike_rate": 77.78, "how_out": "lbw b Cummins", "status": "out"},
+        {"name": "Virat Kohli", "runs": 120, "balls": 110, "fours": 11, "sixes": 3, "strike_rate": 109.09, "how_out": "not out", "status": "not out"},
+        {"name": "KL Rahul", "runs": 18, "balls": 25, "fours": 1, "sixes": 0, "strike_rate": 72.00, "how_out": "b Hazlewood", "status": "out"},
+        {"name": "Rishabh Pant", "runs": 30, "balls": 25, "fours": 3, "sixes": 1, "strike_rate": 120.00, "how_out": "c Carey b Starc", "status": "out"},
+        {"name": "Hardik Pandya", "runs": 6, "balls": 10, "fours": 0, "sixes": 0, "strike_rate": 60.00, "how_out": "run out", "status": "out"}
+      ],
+      "bowling": [
+        {"name": "Mitchell Starc", "overs": "10.0", "maidens": 0, "runs": 58, "wickets": 2, "economy": 5.80},
+        {"name": "Pat Cummins", "overs": "10.0", "maidens": 1, "runs": 52, "wickets": 1, "economy": 5.20},
+        {"name": "Josh Hazlewood", "overs": "10.0", "maidens": 0, "runs": 50, "wickets": 2, "economy": 5.00},
+        {"name": "Adam Zampa", "overs": "10.0", "maidens": 0, "runs": 65, "wickets": 1, "economy": 6.50},
+        {"name": "Glenn Maxwell", "overs": "10.0", "maidens": 0, "runs": 60, "wickets": 1, "economy": 6.00}
+      ],
+      "fall_of_wickets": [
+        {"wicket": 1, "score": 80, "over": "17.3", "batsman": "Shikhar Dhawan"},
+        {"wicket": 2, "score": 110, "over": "25.2", "batsman": "Rohit Sharma"},
+        {"wicket": 3, "score": 145, "over": "30.4", "batsman": "KL Rahul"},
+        {"wicket": 4, "score": 210, "over": "40.1", "batsman": "Rishabh Pant"},
+        {"wicket": 5, "score": 240, "over": "45.2", "batsman": "Hardik Pandya"}
+      ],
+      "run_rate_by_over": [
+        3.5, 4.0, 4.2, 4.5, 4.8, 5.0, 5.2, 5.3, 5.4, 5.5, 
+        5.6, 5.7, 5.7, 5.8, 5.8, 5.9, 5.9, 5.8, 5.8, 5.8, 
+        5.7, 5.7, 5.6, 5.6, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 
+        5.5, 5.5, 5.4, 5.4, 5.4, 5.4, 5.4, 5.5, 5.5, 5.5, 
+        5.6, 5.6, 5.6, 5.6, 5.7, 5.7, 5.7, 5.7, 5.7, 5.7
+      ]
+    },
+    "team2_innings": {
+      "total": 279,
+      "wickets": 10,
+      "overs": "49.5",
+      "extras": 8,
+      "run_rate": 5.6,
+      "batting": [
+        {"name": "David Warner", "runs": 45, "balls": 55, "fours": 5, "sixes": 1, "strike_rate": 81.82, "how_out": "c Pant b Shami", "status": "out"},
+        {"name": "Aaron Finch", "runs": 30, "balls": 40, "fours": 3, "sixes": 0, "strike_rate": 75.00, "how_out": "b Bumrah", "status": "out"},
+        {"name": "Steve Smith", "runs": 85, "balls": 90, "fours": 8, "sixes": 0, "strike_rate": 94.44, "how_out": "c Sharma b Jadeja", "status": "out"},
+        {"name": "Glen Maxwell", "runs": 55, "balls": 40, "fours": 4, "sixes": 3, "strike_rate": 137.50, "how_out": "c Pandya b Chahal", "status": "out"},
+        {"name": "Alex Carey", "runs": 35, "balls": 30, "fours": 2, "sixes": 1, "strike_rate": 116.67, "how_out": "b Shami", "status": "out"},
+        {"name": "Marcus Stoinis", "runs": 20, "balls": 25, "fours": 1, "sixes": 1, "strike_rate": 80.00, "how_out": "b Bumrah", "status": "out"}
+      ],
+      "bowling": [
+        {"name": "Jasprit Bumrah", "overs": "10.0", "maidens": 1, "runs": 45, "wickets": 3, "economy": 4.50},
+        {"name": "Mohammed Shami", "overs": "9.5", "maidens": 0, "runs": 55, "wickets": 2, "economy": 5.59},
+        {"name": "Bhuvneshwar Kumar", "overs": "10.0", "maidens": 0, "runs": 60, "wickets": 1, "economy": 6.00},
+        {"name": "Yuzvendra Chahal", "overs": "10.0", "maidens": 0, "runs": 65, "wickets": 2, "economy": 6.50},
+        {"name": "Ravindra Jadeja", "overs": "10.0", "maidens": 0, "runs": 54, "wickets": 2, "economy": 5.40}
+      ],
+      "fall_of_wickets": [
+        {"wicket": 1, "score": 60, "over": "12.4", "batsman": "Aaron Finch"},
+        {"wicket": 2, "score": 90, "over": "20.1", "batsman": "David Warner"},
+        {"wicket": 3, "score": 190, "over": "35.5", "batsman": "Glen Maxwell"},
+        {"wicket": 4, "score": 240, "over": "43.2", "batsman": "Steve Smith"},
+        {"wicket": 5, "score": 260, "over": "46.3", "batsman": "Alex Carey"}
+      ],
+      "run_rate_by_over": [
+        3.0, 3.5, 3.8, 4.0, 4.2, 4.5, 4.7, 4.8, 4.9, 5.0, 
+        5.1, 5.1, 5.2, 5.2, 5.3, 5.3, 5.3, 5.4, 5.4, 5.4, 
+        5.4, 5.4, 5.4, 5.4, 5.4, 5.5, 5.5, 5.5, 5.5, 5.5, 
+        5.5, 5.6, 5.6, 5.6, 5.6, 5.6, 5.6, 5.7, 5.7, 5.7, 
+        5.7, 5.7, 5.7, 5.7, 5.7, 5.7, 5.6, 5.6, 5.6, 5.6
+      ]
+    },
+    "commentary": [
+      {"over": "49.5", "text": "WICKET! Shami to Hazlewood, caught by Jadeja! India wins by 6 runs!", "type": "wicket"},
+      {"over": "49.4", "text": "Shami to Cummins, single taken. 7 needed from 2 balls.", "type": "regular"},
+      {"over": "49.3", "text": "Shami to Cummins, no run. Dot ball at a crucial moment!", "type": "regular"},
+      {"over": "49.2", "text": "Shami to Cummins, FOUR! Perfectly placed between the fielders.", "type": "boundary"},
+      {"over": "49.1", "text": "Shami to Hazlewood, single taken. Australia needs 12 from 5 balls now.", "type": "regular"},
+      {"over": "48.6", "text": "Bumrah finishes his spell with a dot ball. Excellent bowling under pressure!", "type": "highlight"},
+      {"over": "30.4", "text": "WICKET! Maxwell departs after a quick-fire 55. Caught by Pandya off Chahal's bowling.", "type": "wicket"},
+      {"over": "25.2", "text": "SIX! Maxwell launches Jadeja over long-on for a maximum!", "type": "boundary"},
+      {"over": "20.1", "text": "WICKET! Warner caught behind off Shami for 45. Big breakthrough for India!", "type": "wicket"},
+      {"over": "15.3", "text": "Smith reaches his fifty with a beautiful cover drive for FOUR!", "type": "highlight"}
+    ],
+    "partnerships": [
+      {"batsman1": "Rohit Sharma", "batsman2": "Shikhar Dhawan", "runs": 80, "batsman1Runs": 45, "batsman2Runs": 35},
+      {"batsman1": "Rohit Sharma", "batsman2": "Virat Kohli", "runs": 30, "batsman1Runs": 20, "batsman2Runs": 10},
+      {"batsman1": "Virat Kohli", "batsman2": "KL Rahul", "runs": 35, "batsman1Runs": 20, "batsman2Runs": 15},
+      {"batsman1": "Virat Kohli", "batsman2": "Rishabh Pant", "runs": 65, "batsman1Runs": 35, "batsman2Runs": 30},
+      {"batsman1": "Virat Kohli", "batsman2": "Hardik Pandya", "runs": 30, "batsman1Runs": 24, "batsman2Runs": 6}
+    ]
+  },
+  {
+    "id": "match2",
+    "tournament": "World Cricket Championship",
+    "tournament_id": "wcc2023",
+    "match_number": 2,
+    "status": "live",
+    "match_type": "ODI",
+    "venue": "Lord's Cricket Ground",
+    "location": "London, England",
+    "date": "2023-06-12",
+    "team1": "England",
+    "team1_id": "eng",
+    "team1_logo_color": "#0000FF",
+    "team2": "South Africa",
+    "team2_id": "sa",
+    "team2_logo_color": "#006633",
+    "team1_score": "215/5",
+    "team2_score": "Yet to bat",
+    "overs": "40.2",
+    "result": "Match in progress",
+    "team1_innings": {
+      "total": 215,
+      "wickets": 5,
+      "overs": "40.2",
+      "extras": 10,
+      "run_rate": 5.33,
+      "batting": [
+        {"name": "Jason Roy", "runs": 45, "balls": 50, "fours": 5, "sixes": 0, "strike_rate": 90.00, "how_out": "c de Kock b Rabada", "status": "out"},
+        {"name": "Jonny Bairstow", "runs": 60, "balls": 70, "fours": 6, "sixes": 1, "strike_rate": 85.71, "how_out": "b Nortje", "status": "out"},
+        {"name": "Joe Root", "runs": 35, "balls": 40, "fours": 3, "sixes": 0, "strike_rate": 87.50, "how_out": "c Miller b Shamsi", "status": "out"},
+        {"name": "Eoin Morgan", "runs": 25, "balls": 30, "fours": 2, "sixes": 0, "strike_rate": 83.33, "how_out": "b Rabada", "status": "out"},
+        {"name": "Ben Stokes", "runs": 40, "balls": 42, "fours": 2, "sixes": 2, "strike_rate": 95.24, "how_out": "not out", "status": "not out"},
+        {"name": "Jos Buttler", "runs": 10, "balls": 10, "fours": 1, "sixes": 0, "strike_rate": 100.00, "how_out": "not out", "status": "not out"}
+      ],
+      "bowling": [
+        {"name": "Kagiso Rabada", "overs": "10.0", "maidens": 1, "runs": 45, "wickets": 2, "economy": 4.50},
+        {"name": "Anrich Nortje", "overs": "8.0", "maidens": 0, "runs": 42, "wickets": 1, "economy": 5.25},
+        {"name": "Lungi Ngidi", "overs": "8.0", "maidens": 0, "runs": 48, "wickets": 0, "economy": 6.00},
+        {"name": "Tabraiz Shamsi", "overs": "8.0", "maidens": 0, "runs": 40, "wickets": 1, "economy": 5.00},
+        {"name": "Andile Phehlukwayo", "overs": "6.2", "maidens": 0, "runs": 40, "wickets": 1, "economy": 6.32}
+      ],
+      "fall_of_wickets": [
+        {"wicket": 1, "score": 85, "over": "15.2", "batsman": "Jason Roy"},
+        {"wicket": 2, "score": 110, "over": "20.4", "batsman": "Joe Root"},
+        {"wicket": 3, "score": 150, "over": "30.1", "batsman": "Jonny Bairstow"},
+        {"wicket": 4, "score": 180, "over": "35.3", "batsman": "Eoin Morgan"}
+      ],
+      "run_rate_by_over": [
+        4.0, 4.5, 4.7, 4.8, 5.0, 5.2, 5.3, 5.3, 5.3, 5.4, 
+        5.4, 5.3, 5.3, 5.3, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 
+        5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 5.3, 5.3, 5.3, 5.3, 
+        5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3
+      ]
+    },
+    "team2_innings": {
+      "total": 0,
+      "wickets": 0,
+      "overs": "0.0",
+      "extras": 0,
+      "run_rate": 0,
+      "batting": [],
+      "bowling": [],
+      "fall_of_wickets": [],
+      "run_rate_by_over": []
+    },
+    "commentary": [
+      {"over": "40.2", "text": "Phehlukwayo to Stokes, 2 runs. Good running between the wickets.", "type": "regular"},
+      {"over": "40.1", "text": "Phehlukwayo to Buttler, single taken.", "type": "regular"},
+      {"over": "40.0", "text": "Phehlukwayo to Stokes, no run.", "type": "regular"},
+      {"over": "39.6", "text": "Shamsi finishes his spell with a dot ball.", "type": "regular"},
+      {"over": "39.5", "text": "Shamsi to Buttler, FOUR! Swept away to the boundary.", "type": "boundary"},
+      {"over": "35.3", "text": "WICKET! Morgan bowled by Rabada for 25. Big blow for England!", "type": "wicket"},
+      {"over": "30.1", "text": "WICKET! Bairstow departs after a solid 60. Bowled by Nortje.", "type": "wicket"},
+      {"over": "25.4", "text": "SIX! Bairstow hits Shamsi over long-on for a maximum!", "type": "boundary"},
+      {"over": "20.4", "text": "WICKET! Root caught by Miller off Shamsi for 35.", "type": "wicket"},
+      {"over": "15.2", "text": "WICKET! Roy caught behind off Rabada for 45.", "type": "wicket"}
+    ],
+    "partnerships": [
+      {"batsman1": "Jason Roy", "batsman2": "Jonny Bairstow", "runs": 85, "batsman1Runs": 45, "batsman2Runs": 40},
+      {"batsman1": "Jonny Bairstow", "batsman2": "Joe Root", "runs": 25, "batsman1Runs": 10, "batsman2Runs": 15},
+      {"batsman1": "Jonny Bairstow", "batsman2": "Eoin Morgan", "runs": 40, "batsman1Runs": 10, "batsman2Runs": 30},
+      {"batsman1": "Eoin Morgan", "batsman2": "Ben Stokes", "runs": 30, "batsman1Runs": 5, "batsman2Runs": 25},
+      {"batsman1": "Ben Stokes", "batsman2": "Jos Buttler", "runs": 35, "batsman1Runs": 15, "batsman2Runs": 10}
+    ]
+  },
+  {
+    "id": "match3",
+    "tournament": "World Cricket Championship",
+    "tournament_id": "wcc2023",
+    "match_number": 3,
+    "status": "upcoming",
+    "match_type": "ODI",
+    "venue": "Eden Gardens",
+    "location": "Kolkata, India",
+    "date": "2023-06-15",
+    "team1": "Pakistan",
+    "team1_id": "pak",
+    "team1_logo_color": "#006600",
+    "team2": "New Zealand",
+    "team2_id": "nz",
+    "team2_logo_color": "#000000",
+    "team1_score": "",
+    "team2_score": "",
+    "overs": null,
+    "result": "Match to begin",
+    "team1_innings": null,
+    "team2_innings": null
+  },
+  {
+    "id": "match4",
+    "tournament": "Asian Cricket Cup",
+    "tournament_id": "acc2023",
+    "match_number": 1,
+    "status": "completed",
+    "match_type": "T20",
+    "venue": "Dubai International Stadium",
+    "location": "Dubai, UAE",
+    "date": "2023-05-20",
+    "team1": "India",
+    "team1_id": "ind",
+    "team1_logo_color": "#0080FF",
+    "team2": "Pakistan",
+    "team2_id": "pak",
+    "team2_logo_color": "#006600",
+    "team1_score": "165/6",
+    "team2_score": "164/8",
+    "overs": 20,
+    "result": "India won by 1 run",
+    "man_of_match": "Hardik Pandya",
+    "team1_innings": {
+      "total": 165,
+      "wickets": 6,
+      "overs": "20.0",
+      "extras": 8,
+      "run_rate": 8.25,
+      "batting": [
+        {"name": "Rohit Sharma", "runs": 35, "balls": 25, "fours": 4, "sixes": 1, "strike_rate": 140.00, "how_out": "c Rizwan b Naseem", "status": "out"},
+        {"name": "KL Rahul", "runs": 28, "balls": 20, "fours": 3, "sixes": 1, "strike_rate": 140.00, "how_out": "b Shadab", "status": "out"},
+        {"name": "Virat Kohli", "runs": 40, "balls": 30, "fours": 5, "sixes": 0, "strike_rate": 133.33, "how_out": "c Naseem b Rauf", "status": "out"},
+        {"name": "Suryakumar Yadav", "runs": 15, "balls": 10, "fours": 2, "sixes": 0, "strike_rate": 150.00, "how_out": "b Rauf", "status": "out"},
+        {"name": "Hardik Pandya", "runs": 35, "balls": 25, "fours": 3, "sixes": 2, "strike_rate": 140.00, "how_out": "not out", "status": "not out"},
+        {"name": "Rishabh Pant", "runs": 12, "balls": 10, "fours": 1, "sixes": 0, "strike_rate": 120.00, "how_out": "run out", "status": "out"}
+      ],
+      "bowling": [
+        {"name": "Naseem Shah", "overs": "4.0", "maidens": 0, "runs": 32, "wickets": 1, "economy": 8.00},
+        {"name": "Shaheen Afridi", "overs": "4.0", "maidens": 0, "runs": 35, "wickets": 0, "economy": 8.75},
+        {"name": "Haris Rauf", "overs": "4.0", "maidens": 0, "runs": 38, "wickets": 2, "economy": 9.50},
+        {"name": "Shadab Khan", "overs": "4.0", "maidens": 0, "runs": 30, "wickets": 1, "economy": 7.50},
+        {"name": "Mohammad Nawaz", "overs": "4.0", "maidens": 0, "runs": 30, "wickets": 1, "economy": 7.50}
+      ],
+      "fall_of_wickets": [
+        {"wicket": 1, "score": 50, "over": "6.2", "batsman": "KL Rahul"},
+        {"wicket": 2, "score": 70, "over": "9.5", "batsman": "Rohit Sharma"},
+        {"wicket": 3, "score": 100, "over": "14.1", "batsman": "Suryakumar Yadav"},
+        {"wicket": 4, "score": 130, "over": "17.3", "batsman": "Virat Kohli"},
+        {"wicket": 5, "score": 150, "over": "19.2", "batsman": "Rishabh Pant"}
+      ],
+      "run_rate_by_over": [
+        7.0, 8.0, 8.0, 8.0, 8.2, 8.3, 8.3, 8.2, 8.1, 8.0, 
+        8.0, 8.0, 8.0, 8.1, 8.1, 8.2, 8.2, 8.3, 8.3, 8.2
+      ]
+    },
+    "team2_innings": {
+      "total": 164,
+      "wickets": 8,
+      "overs": "20.0",
+      "extras": 5,
+      "run_rate": 8.2,
+      "batting": [
+        {"name": "Babar Azam", "runs": 45, "balls": 40, "fours": 5, "sixes": 0, "strike_rate": 112.50, "how_out": "b Bumrah", "status": "out"},
+        {"name": "Mohammad Rizwan", "runs": 35, "balls": 30, "fours": 3, "sixes": 1, "strike_rate": 116.67, "how_out": "c Kohli b Chahal", "status": "out"},
+        {"name": "Fakhar Zaman", "runs": 25, "balls": 20, "fours": 2, "sixes": 1, "strike_rate": 125.00, "how_out": "c Pant b Pandya", "status": "out"},
+        {"name": "Iftikhar Ahmed", "runs": 15, "balls": 10, "fours": 1, "sixes": 1, "strike_rate": 150.00, "how_out": "b Bumrah", "status": "out"},
+        {"name": "Shadab Khan", "runs": 20, "balls": 15, "fours": 2, "sixes": 0, "strike_rate": 133.33, "how_out": "not out", "status": "not out"},
+        {"name": "Asif Ali", "runs": 15, "balls": 5, "fours": 1, "sixes": 1, "strike_rate": 300.00, "how_out": "b Arshdeep", "status": "out"}
+      ],
+      "bowling": [
+        {"name": "Jasprit Bumrah", "overs": "4.0", "maidens": 0, "runs": 25, "wickets": 2, "economy": 6.25},
+        {"name": "Bhuvneshwar Kumar", "overs": "4.0", "maidens": 0, "runs": 35, "wickets": 1, "economy": 8.75},
+        {"name": "Hardik Pandya", "overs": "4.0", "maidens": 0, "runs": 30, "wickets": 3, "economy": 7.50},
+        {"name": "Yuzvendra Chahal", "overs": "4.0", "maidens": 0, "runs": 40, "wickets": 1, "economy": 10.00},
+        {"name": "Arshdeep Singh", "overs": "4.0", "maidens": 0, "runs": 34, "wickets": 1, "economy": 8.50}
+      ],
+      "fall_of_wickets": [
+        {"wicket": 1, "score": 60, "over": "8.3", "batsman": "Mohammad Rizwan"},
+        {"wicket": 2, "score": 90, "over": "12.2", "batsman": "Fakhar Zaman"},
+        {"wicket": 3, "score": 120, "over": "16.1", "batsman": "Babar Azam"},
+        {"wicket": 4, "score": 135, "over": "17.4", "batsman": "Iftikhar Ahmed"},
+        {"wicket": 5, "score": 155, "over": "19.2", "batsman": "Asif Ali"}
+      ],
+      "run_rate_by_over": [
+        7.0, 7.5, 7.7, 7.8, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 
+        8.0, 8.0, 8.1, 8.1, 8.1, 8.2, 8.2, 8.2, 8.2, 8.2
+      ]
+    },
+    "commentary": [
+      {"over": "20.0", "text": "Last ball! Pandya to Shadab, dot ball. India wins by 1 run! What a thriller!", "type": "highlight"},
+      {"over": "19.5", "text": "Pandya to Naseem, single. Pakistan needs 2 from the last ball!", "type": "regular"},
+      {"over": "19.4", "text": "Pandya to Shadab, single. The tension is palpable!", "type": "regular"},
+      {"over": "19.3", "text": "WICKET! Pandya to Nawaz, caught at long-off! Huge moment!", "type": "wicket"},
+      {"over": "19.2", "text": "Pandya to Nawaz, 2 runs. Pakistan needs 5 from 4 balls.", "type": "regular"},
+      {"over": "19.1", "text": "Pandya to Nawaz, no run. Excellent yorker!", "type": "regular"},
+      {"over": "17.4", "text": "WICKET! Bumrah bowls Iftikhar Ahmed with a perfect yorker!", "type": "wicket"},
+      {"over": "16.1", "text": "WICKET! Babar Azam departs for 45, bowled by Bumrah!", "type": "wicket"},
+      {"over": "12.2", "text": "WICKET! Fakhar Zaman caught by Pant off Pandya's bowling.", "type": "wicket"},
+      {"over": "8.3", "text": "WICKET! Rizwan caught by Kohli off Chahal's bowling. Big breakthrough!", "type": "wicket"}
+    ],
+    "partnerships": [
+      {"batsman1": "Babar Azam", "batsman2": "Mohammad Rizwan", "runs": 60, "batsman1Runs": 30, "batsman2Runs": 30},
+      {"batsman1": "Babar Azam", "batsman2": "Fakhar Zaman", "runs": 30, "batsman1Runs": 10, "batsman2Runs": 20},
+      {"batsman1": "Babar Azam", "batsman2": "Iftikhar Ahmed", "runs": 30, "batsman1Runs": 5, "batsman2Runs": 15},
+      {"batsman1": "Shadab Khan", "batsman2": "Asif Ali", "runs": 20, "batsman1Runs": 5, "batsman2Runs": 15},
+      {"batsman1": "Shadab Khan", "batsman2": "Mohammad Nawaz", "runs": 9, "batsman1Runs": 5, "batsman2Runs": 4}
+    ]
+  },
+  {
+    "id": "match5",
+    "tournament": "Asian Cricket Cup",
+    "tournament_id": "acc2023",
+    "match_number": 2,
+    "status": "completed",
+    "match_type": "T20",
+    "venue": "Sharjah Cricket Stadium",
+    "location": "Sharjah, UAE",
+    "date": "2023-05-22",
+    "team1": "Sri Lanka",
+    "team1_id": "sl",
+    "team1_logo_color": "#0000FF",
+    "team2": "Bangladesh",
+    "team2_id": "ban",
+    "team2_logo_color": "#006633",
+    "team1_score": "148/9",
+    "team2_score": "120/10",
+    "overs": 20,
+    "result": "Sri Lanka won by 28 runs",
+    "man_of_match": "Wanindu Hasaranga",
+    "team1_innings": {
+      "total": 148,
+      "wickets": 9,
+      "overs": "20.0",
+      "extras": 6,
+      "run_rate": 7.4,
+      "batting": [
+        {"name": "Pathum Nissanka", "runs": 30, "balls": 25, "fours": 3, "sixes": 1, "strike_rate": 120.00, "how_out": "b Shakib", "status": "out"},
+        {"name": "Kusal Mendis", "runs": 25, "balls": 20, "fours": 3, "sixes": 0, "strike_rate": 125.00, "how_out": "c Mushfiqur b Mustafizur", "status": "out"},
+        {"name": "Charith Asalanka", "runs": 35, "balls": 30, "fours": 2, "sixes": 2, "strike_rate": 116.67, "how_out": "b Mehidy", "status": "out"},
+        {"name": "Bhanuka Rajapaksa", "runs": 15, "balls": 10, "fours": 2, "sixes": 0, "strike_rate": 150.00, "how_out": "c Mahmudullah b Taskin", "status": "out"},
+        {"name": "Dasun Shanaka", "runs": 20, "balls": 15, "fours": 1, "sixes": 1, "strike_rate": 133.33, "how_out": "c Liton b Mustafizur", "status": "out"},
+        {"name": "Wanindu Hasaranga", "runs": 15, "balls": 10, "fours": 1, "sixes": 1, "strike_rate": 150.00, "how_out": "not out", "status": "not out"}
+      ],
+      "bowling": [
+        {"name": "Taskin Ahmed", "overs": "4.0", "maidens": 0, "runs": 32, "wickets": 1, "economy": 8.00},
+        {"name": "Mustafizur Rahman", "overs": "4.0", "maidens": 0, "runs": 30, "wickets": 2, "economy": 7.50},
+        {"name": "Shakib Al Hasan", "overs": "4.0", "maidens": 0, "runs": 25, "wickets": 2, "economy": 6.25},
+        {"name": "Mehidy Hasan", "overs": "4.0", "maidens": 0, "runs": 30, "wickets": 2, "economy": 7.50},
+        {"name": "Mohammad Saifuddin", "overs": "4.0", "maidens": 0, "runs": 31, "wickets": 2, "economy": 7.75}
+      ],
+      "fall_of_wickets": [
+        {"wicket": 1, "score": 45, "over": "6.3", "batsman": "Kusal Mendis"},
+        {"wicket": 2, "score": 60, "over": "9.1", "batsman": "Pathum Nissanka"},
+        {"wicket": 3, "score": 85, "over": "12.4", "batsman": "Bhanuka Rajapaksa"},
+        {"wicket": 4, "score": 120, "over": "17.2", "batsman": "Charith Asalanka"},
+        {"wicket": 5, "score": 135, "over": "19.1", "batsman": "Dasun Shanaka"}
+      ],
+      "run_rate_by_over": [
+        6.0, 6.5, 7.0, 7.3, 7.4, 7.5, 7.4, 7.4, 7.3, 7.3, 
+        7.3, 7.3, 7.3, 7.3, 7.3, 7.4, 7.4, 7.4, 7.4, 7.4
+      ]
+    },
+    "team2_innings": {
+      "total": 120,
+      "wickets": 10,
+      "overs": "18.4",
+      "extras": 5,
+      "run_rate": 6.43,
+      "batting": [
+        {"name": "Mohammad Naim", "runs": 20, "balls": 15, "fours": 2, "sixes": 1, "strike_rate": 133.33, "how_out": "b Theekshana", "status": "out"},
+        {"name": "Liton Das", "runs": 15, "balls": 20, "fours": 2, "sixes": 0, "strike_rate": 75.00, "how_out": "b Hasaranga", "status": "out"},
+        {"name": "Shakib Al Hasan", "runs": 30, "balls": 25, "fours": 3, "sixes": 1, "strike_rate": 120.00, "how_out": "c Shanaka b Chameera", "status": "out"},
+        {"name": "Mushfiqur Rahim", "runs": 25, "balls": 30, "fours": 2, "sixes": 0, "strike_rate": 83.33, "how_out": "b Hasaranga", "status": "out"},
+        {"name": "Mahmudullah", "runs": 15, "balls": 15, "fours": 1, "sixes": 0, "strike_rate": 100.00, "how_out": "st Mendis b Theekshana", "status": "out"},
+        {"name": "Afif Hossain", "runs": 10, "balls": 7, "fours": 1, "sixes": 0, "strike_rate": 142.86, "how_out": "b Hasaranga", "status": "out"}
+      ],
+      "bowling": [
+        {"name": "Dushmantha Chameera", "overs": "3.4", "maidens": 0, "runs": 25, "wickets": 2, "economy": 6.82},
+        {"name": "Maheesh Theekshana", "overs": "4.0", "maidens": 0, "runs": 22, "wickets": 2, "economy": 5.50},
+        {"name": "Wanindu Hasaranga", "overs": "4.0", "maidens": 0, "runs": 20, "wickets": 3, "economy": 5.00},
+        {"name": "Chamika Karunaratne", "overs": "3.0", "maidens": 0, "runs": 25, "wickets": 1, "economy": 8.33},
+        {"name": "Lahiru Kumara", "overs": "4.0", "maidens": 0, "runs": 28, "wickets": 2, "economy": 7.00}
+      ],
+      "fall_of_wickets": [
+        {"wicket": 1, "score": 30, "over": "4.2", "batsman": "Mohammad Naim"},
+        {"wicket": 2, "score": 45, "over": "8.3", "batsman": "Liton Das"},
+        {"wicket": 3, "score": 80, "over": "12.1", "batsman": "Shakib Al Hasan"},
+        {"wicket": 4, "score": 95, "over": "15.4", "batsman": "Mushfiqur Rahim"},
+        {"wicket": 5, "score": 110, "over": "17.2", "batsman": "Mahmudullah"}
+      ],
+      "run_rate_by_over": [
+        5.0, 5.5, 6.0, 6.3, 6.4, 6.5, 6.6, 6.5, 6.4, 6.4, 
+        6.4, 6.5, 6.5, 6.4, 6.4, 6.3, 6.3, 6.3, 6.4
+      ]
+    },
+    "commentary": [
+      {"over": "18.4", "text": "WICKET! Chameera bowls Taskin Ahmed. Sri Lanka wins by 28 runs!", "type": "wicket"},
+      {"over": "17.2", "text": "WICKET! Mahmudullah stumped by Kusal Mendis off Theekshana's bowling.", "type": "wicket"},
+      {"over": "15.4", "text": "WICKET! Mushfiqur Rahim bowled by Hasaranga for 25. Bangladesh in trouble now!", "type": "wicket"},
+      {"over": "12.1", "text": "WICKET! Shakib caught by Shanaka off Chameera's bowling. Big wicket!", "type": "wicket"},
+      {"over": "10.3", "text": "FOUR! Shakib sweeps Hasaranga to the boundary.", "type": "boundary"},
+      {"over": "8.3", "text": "WICKET! Liton Das bowled by Hasaranga. Bangladesh losing momentum.", "type": "wicket"},
+      {"over": "4.2", "text": "WICKET! Naim bowled by Theekshana for 20.", "type": "wicket"},
+      {"over": "3.5", "text": "SIX! Naim hits Karunaratne over midwicket for a maximum!", "type": "boundary"}
+    ],
+    "partnerships": [
+      {"batsman1": "Mohammad Naim", "batsman2": "Liton Das", "runs": 30, "batsman1Runs": 20, "batsman2Runs": 10},
+      {"batsman1": "Liton Das", "batsman2": "Shakib Al Hasan", "runs": 15, "batsman1Runs": 5, "batsman2Runs": 10},
+      {"batsman1": "Shakib Al Hasan", "batsman2": "Mushfiqur Rahim", "runs": 35, "batsman1Runs": 20, "batsman2Runs": 15},
+      {"batsman1": "Mushfiqur Rahim", "batsman2": "Mahmudullah", "runs": 15, "batsman1Runs": 10, "batsman2Runs": 5},
+      {"batsman1": "Mahmudullah", "batsman2": "Afif Hossain", "runs": 15, "batsman1Runs": 10, "batsman2Runs": 5}
+    ]
+  }
+]
