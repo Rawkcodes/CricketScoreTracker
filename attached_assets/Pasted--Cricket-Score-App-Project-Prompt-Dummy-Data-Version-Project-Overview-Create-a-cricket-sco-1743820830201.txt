@@ -1,0 +1,57 @@
+# Cricket Score App Project Prompt (Dummy Data Version)
+
+## Project Overview
+Create a cricket score tracking web application similar to Cricbuzz or ESPNCricinfo using entirely dummy/static data. This project will be implemented in Replit and serve as a college project demonstration, showcasing web development skills without requiring any real-time data or API connections.
+
+## Core Requirements
+1. Develop a responsive web interface that works on both desktop and mobile screens
+2. Display match scores and details using pre-created dummy data
+3. Include at least one interactive feature (e.g., navigation between matches, team filtering)
+4. Implement clean, well-commented code with proper structure
+5. Focus on a polished UI/UX for the main features
+
+## Key Features to Implement
+
+### Homepage
+- Display 3-5 "current" matches with teams, dummy scores, and match status
+- Include a navigation menu for different sections
+- Show 2-3 mock news headlines or highlights
+
+### Match Detail Page
+- Full scorecard with batting and bowling statistics (all dummy data)
+- Simple match commentary highlights (pre-written)
+- Match summary with key performers
+- Basic match visualization (run rate chart or similar)
+
+### Teams Section
+- List of 6-8 major cricket teams with logos and basic info
+- Mock team rankings
+- Fictional recent performance data
+
+### Player Profiles
+- 3-5 featured players with fictional statistics
+- Player images and short bios
+- Career highlights (all pre-created)
+
+### Search Functionality
+- Simple search for finding pre-loaded matches, players, or teams
+
+## Technical Guidelines
+- Use HTML, CSS, and JavaScript for the frontend
+- Store all dummy data in JSON format files within your project
+- Implement responsive design using CSS Grid/Flexbox
+- Add comments explaining the code logic and structure
+- No need for backend connections or real-time updates
+
+## Data Creation Guidelines
+- Create realistic but fictional match scenarios
+- Include some interesting situations like close finishes or high scores
+- Pre-populate all statistics, no calculations needed
+- Create 2-3 "tournaments" with 3-4 matches each
+
+## Deliverables
+1. Functional cricket score web application with dummy data
+2. Brief documentation explaining the features and implementation
+3. Project presentation slides highlighting key features and design decisions
+
+This project demonstrates your ability to create a well-designed, structured web application while focusing on the user experience rather than backend functionality.
